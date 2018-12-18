@@ -1,0 +1,64 @@
+{% extends 'templates/app.twig' %}
+
+{% block bodyclass %}class="primary"{% endblock %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+
+    <div class="line-grid">
+    </div>
+
+    <div class="uk-position-relative">
+        <div class="uk-position-top">
+            {% include 'templates/partials/navigation.twig' %}
+            <div class="uk-section uk-section-large">
+                <div class="uk-text-center uk-flex uk-flex-middle">
+                    <div class="uk-container">
+
+                        <div class="uk-flex-middle uk-grid-margin uk-grid" uk-grid>
+                            <div class="uk-width-expand@m">
+                                <h2 class="uk-text-left uk-heading-main uk-scrollspy-inview uk-animation-fade">
+                                    {{ trans('headers.welcome') }}
+                                </h2>
+                                <div class="uk-text-left uk-margin uk-scrollspy-inview uk-animation-fade">
+                                    <p class="uk-heading-p">{{ trans('headers.welcome.text') }}</p>
+                                </div>
+                                <div class="uk-text-left uk-scrollspy-inview uk-animation-fade">
+                                    <button class="uk-button uk-button-primary-g uk-border-rounded-big">{{ trans('headers.started?') }} <span class="btn-arrow"><img src="images/arrow.png" alt="Arrow directed to the right"/></span></button>
+                                </div>
+                            </div>
+                            <div class="uk-width-expand@m uk-first-column">
+                                <div class="uk-margin uk-scrollspy-inview uk-animation-fade">
+                                    <img src="images/main_box.png" alt="Image showing boxes with files">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <footer class="main">
+                <div class="uk-section">
+                    <div class="uk-container">
+                        <div class="uk-flex uk-flex-around uk-grid-margin uk-grid" uk-grid>
+                            <div class="uk-width-expand@m">
+                                <ul class="uk-navbar-nav">
+                                    <li><a href="#">Terms and corditions</a></li>
+                                    <li><a href="#">Legal note</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Logowanie</a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-width-expand@m uk-flex uk-flex-right uk-flex-middle">
+                                <p class="footer">2018 &copy; PHOTOVALLEY.COM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+{% endblock %}

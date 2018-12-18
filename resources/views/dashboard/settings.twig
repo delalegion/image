@@ -1,0 +1,124 @@
+{% extends 'templates/app.twig' %}
+
+{% block bodyclass %}greenBG{% endblock %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+
+        {% include 'templates/partials/dashboardui.twig' %}
+
+        <section class="uk-section uk-text-center" id="settingsTitle">
+            <div class="uk-container-small">
+
+                <div class="uk-flex uk-flex-middle">
+                    <div class="uk-width-1-2">
+                        <h1 class="primaryTitle uk-text-primary">Ustawienia</h1>
+                        <p class="pStyle pBlue">Edytuj swoje ustawienia dotyczące portalu, profilu
+                            oraz połącz swoje konto z paypalem oraz innymi
+                            środkami do transakcji.</p>
+                    </div>
+                    <div class="uk-width-1-2">
+                        <img data-src="images/settingsViewIcon.png" alt="Settings icon with gear and credit card" uk-img>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="uk-section uk-text-center uk-padding-remove-top" id="settings">
+            <div class="uk-container-small">
+
+                <ul class="settingsMenu" uk-accordion="multiple: true">
+                    <li class="uk-open uk-accordion-view">
+                        <a class="uk-accordion-title uk-text-left pBlue" href="#">
+                            <div class="uk-flex uk-flex-middle">
+                                <img data-src="images/settingsIconProfile.png" alt="Settings profile icon" uk-img>
+                                <span class="accordTitle">Ustawienia profilu</span>
+                            </div>
+                        </a>
+                        <div class="uk-accordion-content">
+                            <dl class="uk-margin">
+                                <dt><label class="uk-form-label" for="emailChange">Zmień adres email</label></dt>
+                                <dd><input class="uk-input uk-inputNormal" id="emailChange" type="text" placeholder="nielotweb@gmail.com"></dd>
+                            </dl>
+                            <dl class="uk-margin">
+                                <dt><label class="uk-form-label" for="passwordChange">Zmień hasło</label></dt>
+                                <dd>
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon uk-form-icon-flip"><img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Hasło musi składać się z co najmniej 7 znaków. Musi być zawarta przynajmniej jedna mała oraz duża litera oraz jedna cyfra."></span>
+                                        <input class="uk-input uk-inputNormal" id="passwordChange" type="text" placeholder="Wpisz hasło...">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="uk-margin">
+                                <dt><label class="uk-form-label" for="passwordChangeConfirm">Potwierdź hasło</label></dt>
+                                <dd><input class="uk-input uk-inputNormal" id="passwordChangeConfirm" type="text" placeholder="Potwierdź nowe hasło..."></dd>
+                            </dl>
+                            <dl class="uk-margin">
+                                <dt><label class="uk-form-label" for="keyChange">Zmień kod dostępu</label></dt>
+                                <dd>
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon uk-form-icon-flip"><img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Kod dostępu musi składac się z 5 znaków. Może zawierać tylko cyfry naturalne od 0 do 10."></span>
+                                        <input class="uk-input uk-inputNormal" id="keyChange" type="text" placeholder="Zmień swój kod dostępu">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
+                                <dt><label class="uk-form-label" for="auth2Form">Uwierzytelnianie dwuskładnikowe <img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Aby skonfigurwoać uwierzytelnianie zesrcrolluj kilka sekcji w dół."></label></dt>
+                                <input type="checkbox" id="auth2Form" class="swtichCheckbox" /><label for="auth2Form" class="labelSwtichCheckbox">Toggle</label>
+                            </dl>
+                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
+                                <dt><label class="uk-form-label" for="backupForm">Kopie zapasowe</label></dt>
+                                <input type="checkbox" id="backupForm" class="swtichCheckbox" /><label for="backupForm" class="labelSwtichCheckbox">Toggle</label>
+                            </dl>
+                            <dl class="uk-margin">
+                                <button type="button" class="uk-button uk-button-primary">ZAPISZ ZMIANY</button>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="uk-accordion-view">
+                        <a class="uk-accordion-title uk-text-left" href="#">
+                            <div class="uk-flex uk-flex-middle">
+                                <img data-src="images/settingsIconNotif.png" alt="Settings notification icon" uk-img>
+                                <span class="accordTitle">Ustawienia powiadomień</span>
+                            </div>
+                        </a>
+                        <div class="uk-accordion-content">
+                            <h2 class="uk-h3 pBlue">Powiadom mnie gdy: </h2>
+                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
+                                <dt><label class="uk-form-label" for="infoAboutService">Będzie nowość w naszym serwisie</label></dt>
+                                <input type="checkbox" id="infoAboutService" class="swtichCheckbox" checked/><label for="infoAboutService" class="labelSwtichCheckbox">Toggle</label>
+                            </dl>
+                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
+                                <dt><label class="uk-form-label" for="someoneComment">Ktoś skomentuje zdjęcie/projekt</label></dt>
+                                <input type="checkbox" id="someoneComment" class="swtichCheckbox" checked/><label for="someoneComment" class="labelSwtichCheckbox">Toggle</label>
+                            </dl>
+                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
+                                <dt><label class="uk-form-label" for="downloadPicture">Ktoś poprosi o pobranie udostępnionych zdjęć/projektów <img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Gdy wyłączysz tą opcję, udostępnione przez Ciebie zdjęcia czy projekty będzie można pobierać bez twojej zgody."></label></dt>
+                                <input type="checkbox" id="downloadPicture" class="swtichCheckbox"/><label for="downloadPicture" class="labelSwtichCheckbox">Toggle</label>
+                            </dl>
+                            <dl class="uk-margin">
+                                <button type="button" class="uk-button uk-button-primary">ZAPISZ ZMIANY</button>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="uk-accordion-view">
+                        <a class="uk-accordion-title uk-text-left" href="#">
+                            <div class="uk-flex uk-flex-middle">
+                                <img data-src="images/settingsIconCard.png" alt="Settings payment icon" uk-img>
+                                <span class="accordTitle">Ustawienia płatności</span>
+                            </div>
+                        </a>
+                        <div class="uk-accordion-content">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        {% include 'templates/partials/dashboarduiend.twig' %}
+
+{% endblock %}

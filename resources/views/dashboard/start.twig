@@ -1,0 +1,115 @@
+{% extends 'templates/app.twig' %}
+
+{% block bodyclass %}greenBG{% endblock %}
+
+{% block title %}Users page{% endblock %}
+
+{% block content %}
+
+    {#{% if session.logInTrue %}#}
+        {#Zalogowałeś się jako..  {{ auth.user.name }}#}
+        {#<br />#}
+        {#A twój email to.. {{ auth.user.email }}#}
+
+        {#<a href="{{ path_for('auth.logout') }}" type="button" class="uk-button uk-button-primary">Wyloguj się</a>#}
+    {#{% endif %}#}
+
+        {% include 'templates/partials/dashboardui.twig' %}
+
+        <section class="uk-section-small" id="menuDashboard">
+            <div class="uk-container">
+
+                <div class="uk-child-width-expand@m uk-child-width-1-1@s uk-text-center" uk-grid>
+                    <div class="marginTopBox">
+                        <div class="uk-card uk-card-default uk-card-body cardMenu100">
+                            <img src="images/bigmenu1icon.png" alt="Projects icon menu">
+                            <h2 class="titleMenu">Projekty i zdjęcia</h2>
+                            <p class="pMenu">Przejdź do miejsca gdzie znajdują się twoje pliki</p>
+                        </div>
+                    </div>
+                    <div class="marginTopBox">
+                        <div class="uk-flex-column uk-card uk-card-default uk-card-body">
+                            <img src="images/bigmenu2icon.png" alt="Settings icon menu">
+                            <h2 class="titleMenu">Ustawienia profilu</h2>
+                            <p class="pMenu">Przejdź do miejsca gdzie będziesz mógł zmienić swoje preferencje</p>
+                        </div>
+                    </div>
+                    <div class="marginTopBox">
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <img src="images/bigmenu3icon.png" alt="Editor icon menu">
+                            <h2 class="titleMenu">Edytor zdjęć</h2>
+                            <p class="pMenu">Przejdź do miejsca gdzie będziesz mógł edytować wrzucone zdjęcie</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="uk-section-small" id="statistic">
+            <div class="uk-container">
+
+                <h2 class="specialTitle">
+                    <span class="specialBlock">Statystki</span>
+                </h2>
+                <div class="uk-text-center" uk-grid>
+                    <div class="uk-width-2-3@l uk-width-1-1@m">
+                        <div class="uk-flex uk-flex-column">
+                            <div class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center" uk-grid>
+                                <div>
+                                    <div class="uk-flex uk-flex-column uk-card uk-card-default uk-card-body cardPadding">
+                                        <span class="statsNumber">1240</span>
+                                        <span class="statsTitle">Wrzuconych zdjęć</span>
+                                        <span class="statsNumberOutside largeResponsive">1240</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="uk-flex uk-flex-column uk-card uk-card-default uk-card-body cardPadding">
+                                        <span class="statsNumber">152121</span>
+                                        <span class="statsTitle">WYŚWIETLEŃ PROJEKTÓW</span>
+                                        <span class="statsNumberOutside largeResponsive">152121</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-child-width-1-2@m uk-text-center" uk-grid>
+                                <div>
+                                    <div class="uk-flex uk-flex-column uk-card uk-card-default uk-card-body cardPadding">
+                                        <span class="statsNumber">1010</span>
+                                        <span class="statsTitle">DOSTĘPNYCH KREDYTÓW</span>
+                                        <span class="statsNumberOutside largeResponsive">1010</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="uk-flex uk-flex-column uk-card uk-card-default uk-card-body cardPadding">
+                                        <span class="statsNumber">22121</span>
+                                        <span class="statsTitle">POBRANYCH ZDJĘĆ</span>
+                                        <span class="statsNumberOutside largeResponsive">22121</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@l uk-width-1-1@m">
+                        <div class="uk-flex uk-flex-column">
+                            <div class="uk-flex uk-flex-column uk-card uk-card-default uk-card-body">
+                                <div class="uk-flex uk-flex-column">
+                                    <div class="uk-flex uk-flex-around uk-flex-middle">
+                                        <span class="emailTitle">NEWSLETTER?</span>
+                                        <img data-src="images/emailSub.png" alt="Email subscription icon" uk-img>
+                                    </div>
+                                    <p class="pStyle pGreen">Podaj swój email a my będziemy wysyłać Ci wiadomości odnośnie nowości w naszym serwisie!</p>
+                                    <div class="uk-margin">
+                                        <input type="text" name="email" class="uk-input" placeholder="Podaj swój email">
+                                    </div>
+                                    <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-flex-center borderRounded">Aktywuj usługę</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        {% include 'templates/partials/dashboarduiend.twig' %}
+{% endblock %}

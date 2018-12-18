@@ -1,0 +1,21 @@
+{% extends 'templates/app.twig' %}
+
+{% block title %}Users page{% endblock %}
+
+{% block content %}
+
+    <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ base_url }}/images/dark.jpg" uk-img>
+
+        {% if user %}
+
+            <div uk-scrollspy="cls: uk-animation-fade; delay: 400; repeat: false">
+                <h1>Profil użytkownika {{ user.name }}</h1>
+            </div>
+
+        {% else %}
+        <h3>Przykro nam, nie znaleziono użytkownika</h3>
+        {% endif %}
+
+    </div>
+
+{% endblock %}
