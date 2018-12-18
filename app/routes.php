@@ -22,5 +22,6 @@ $app->group('', function () {
     $this->get('/users/{user}', 'UsersController:index')->setName('users');
     $this->get('/dashboard', 'StartController:index')->setName('dashboard');
     $this->get('/settings', 'SettingsController:index')->setName('settings');
+    $this->get('/setting2s', 'SettingsController:index')->setName('settings2');
 
 })->add(new \App\Middleware\AuthMiddleware($container));
