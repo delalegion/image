@@ -21,25 +21,31 @@
 
                 <div class="uk-child-width-expand@m uk-child-width-1-1@s uk-text-center" uk-grid>
                     <div class="marginTopBox">
-                        <div class="uk-card uk-card-default uk-card-body cardMenu100">
-                            <img src="images/bigmenu1icon.png" alt="Projects icon menu">
-                            <h2 class="titleMenu">Projekty i zdjęcia</h2>
-                            <p class="pMenu">Przejdź do miejsca gdzie znajdują się twoje pliki</p>
-                        </div>
+                        <a href="{{ path_for('dashboard') }}">
+                           <div class="uk-card uk-card-default uk-card-body cardMenu100">
+                              <img src="images/bigmenu1icon.png" alt="Projects icon menu">
+                              <h2 class="titleMenu">Projekty i zdjęcia</h2>
+                              <p class="pMenu">Przejdź do miejsca gdzie znajdują się twoje pliki</p>
+                           </div>
+                        </a>
                     </div>
                     <div class="marginTopBox">
-                        <div class="uk-flex-column uk-card uk-card-default uk-card-body">
-                            <img src="images/bigmenu2icon.png" alt="Settings icon menu">
-                            <h2 class="titleMenu">Ustawienia profilu</h2>
-                            <p class="pMenu">Przejdź do miejsca gdzie będziesz mógł zmienić swoje preferencje</p>
-                        </div>
+                        <a href="{{ path_for('settings') }}">
+                            <div class="uk-flex-column uk-card uk-card-default uk-card-body">
+                                <img src="images/bigmenu2icon.png" alt="Settings icon menu">
+                                <h2 class="titleMenu">Ustawienia profilu</h2>
+                                <p class="pMenu">Przejdź do miejsca gdzie będziesz mógł zmienić swoje preferencje</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="marginTopBox">
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <img src="images/bigmenu3icon.png" alt="Editor icon menu">
-                            <h2 class="titleMenu">Edytor zdjęć</h2>
-                            <p class="pMenu">Przejdź do miejsca gdzie będziesz mógł edytować wrzucone zdjęcie</p>
-                        </div>
+                        <a href="{{ path_for('settings') }}">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <img src="images/bigmenu3icon.png" alt="Editor icon menu">
+                                <h2 class="titleMenu">Edytor zdjęć</h2>
+                                <p class="pMenu">Przejdź do miejsca gdzie będziesz mógł edytować wrzucone zdjęcie</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 

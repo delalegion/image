@@ -123,9 +123,6 @@ body.primary
     display: flex;
     justify-content: center;
 }
-.paddingBorderNav {
-    padding-left: 25px;
-}
 .alertNavBox {
     padding-right: 30px;
     padding-left: 30px;
@@ -186,6 +183,9 @@ body.primary
 }
 .uk-card {
     border-radius: 6px;
+}
+a:hover {
+    text-decoration: none;
 }
 .infoBox {
     padding: 25px;
@@ -408,9 +408,6 @@ span.specialBlock::after {
     font-size: 18px;
     font-weight: 500;
 }
-.uk-form-horizontal .uk-form-label {
-    width: auto;
-}
 dt {
     text-align: left;
 }
@@ -463,11 +460,23 @@ input[type=checkbox]{
 .labelSwtichCheckbox:active:after {
     width: 35px;
 }
-
-
-
-
-
+.order1 {
+    order: 1;
+}
+.order2 {
+    order: 2;
+}
+.order3 {
+    order: 3;
+}
+.uk-navbar-response {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.paddingBorderNav {
+    padding-left: 0px;
+}
 
 @media only screen and (min-width: 1600px) {
 
@@ -490,8 +499,20 @@ input[type=checkbox]{
 
 @media only screen and (min-width: 960px) {
 
+    .uk-form-horizontal .uk-form-label {
+        width: auto;
+    }
+
 }
 
 @media only screen and (min-width: 640px) {
+
+    .uk-navbar-response {
+        margin-left: auto;
+        margin-right: unset;
+    }
+    .paddingBorderNav {
+        padding-left: 25px;
+    }
 
 }

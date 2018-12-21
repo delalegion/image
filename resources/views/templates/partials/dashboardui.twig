@@ -49,7 +49,7 @@
     <div class="uk-flex uk-flex-column uk-width-1-1 uk-position-relative">
         <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" class="myNav" style="background: #29ce76;">
             <nav class="uk-container uk-container-large uk-light" uk-navbar style="background: #29ce76; position: relative; z-index: 980;">
-                <div class="uk-navbar-right">
+                <div class="uk-navbar-response">
                     <ul class="uk-navbar-nav">
                         <li class="uk-flex uk-flex-middle largeResponsive">
                             <a href="#" class="uk-link-reset uk-padding-remove"><div class="subBox">DARMOWY | KREDYTÓW: 100</div></a>
@@ -83,13 +83,13 @@
                             <a class="uk-link-reset" href="#">
                                 <div class="uk-flex uk-flex-middle">
                                     <img class="uk-comment-avatar uk-border-rounded uk-margin-right" src="images/avatar.jpg" width="60" height="60" alt="Avatar">
-                                    <h4 class="uk-comment-title uk-margin-remove">{{ auth.user.name }} Kruk <span class="uk-margin-small-right" uk-icon="icon: chevron-down;  ratio: 1.4"></span></h4>
+                                    <h4 class="uk-comment-title uk-margin-remove">{{ auth.user.name }} Kruk <span uk-icon="icon: chevron-down;  ratio: 1.4"></span></h4>
                                 </div>
                             </a>
                             <div uk-dropdown="pos: bottom-center; mode: click" class="uk-navbar-dropdown-marginTop">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Ustawienia profilu</a></li>
-                                    <li><a href="#">Preferencje serwisu</a></li>
+                                    <li><a href="{{ path_for('dashboard') }}">Strona główna</a></li>
+                                    <li><a href="{{ path_for('settings') }}">Ustawienia</a></li>
                                     <li><a href="#">Support</a></li>
                                     <li class="uk-nav-divider"></li>
                                     <li><a href="#">Twoje projekty</a></li>

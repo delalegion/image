@@ -11,14 +11,14 @@
         <section class="uk-section uk-text-center" id="settingsTitle">
             <div class="uk-container-small">
 
-                <div class="uk-flex uk-flex-middle">
-                    <div class="uk-width-1-2">
+                <div class="uk-flex uk-flex-middle" uk-grid>
+                    <div class="uk-width-1-1@s uk-width-1-2@m order2">
                         <h1 class="primaryTitle uk-text-primary">Ustawienia</h1>
                         <p class="pStyle pBlue">Edytuj swoje ustawienia dotyczące portalu, profilu
                             oraz połącz swoje konto z paypalem oraz innymi
                             środkami do transakcji.</p>
                     </div>
-                    <div class="uk-width-1-2">
+                    <div class="uk-width-1-1@s uk-width-1-2@m order1">
                         <img data-src="images/settingsViewIcon.png" alt="Settings icon with gear and credit card" uk-img>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                                 <dt><label class="uk-form-label" for="passwordChange">Zmień hasło</label></dt>
                                 <dd>
                                     <div class="uk-inline uk-width-1-1">
-                                        <span class="uk-form-icon uk-form-icon-flip"><img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Hasło musi składać się z co najmniej 7 znaków. Musi być zawarta przynajmniej jedna mała oraz duża litera oraz jedna cyfra."></span>
+                                        <span class="uk-form-icon uk-form-icon-flip"><img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Hasło musi składać się z co najmniej 7 znaków. Musi zawierać przynajmniej jedną małą oraz dużą literę oraz jedną cyfrę."></span>
                                         <input class="uk-input uk-inputNormal" id="passwordChange" type="text" placeholder="Wpisz hasło...">
                                     </div>
                                 </dd>
@@ -64,16 +64,20 @@
                                     </div>
                                 </dd>
                             </dl>
-                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
-                                <dt><label class="uk-form-label" for="auth2Form">Uwierzytelnianie dwuskładnikowe <img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Aby skonfigurwoać uwierzytelnianie zesrcrolluj kilka sekcji w dół."></label></dt>
-                                <input type="checkbox" id="auth2Form" class="swtichCheckbox" /><label for="auth2Form" class="labelSwtichCheckbox">Toggle</label>
+                            <dl class="uk-margin-medium uk-form-horizontal">
+                                <div uk-grid>
+                                    <dt class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><label class="uk-form-label" for="auth2Form">Uwierzytelnianie dwuskładnikowe <img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Aby skonfigurwoać uwierzytelnianie zesrcrolluj kilka sekcji w dół."></label></dt>
+                                    <dd class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><input type="checkbox" id="auth2Form" class="swtichCheckbox" /><label for="auth2Form" class="labelSwtichCheckbox">Toggle</label></dd>
+                                </div>
                             </dl>
-                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
-                                <dt><label class="uk-form-label" for="backupForm">Kopie zapasowe</label></dt>
-                                <input type="checkbox" id="backupForm" class="swtichCheckbox" /><label for="backupForm" class="labelSwtichCheckbox">Toggle</label>
+                            <dl class="uk-margin-medium uk-form-horizontal">
+                                <div uk-grid>
+                                    <dt class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><label class="uk-form-label" for="backupForm">Kopie zapasowe</label></dt>
+                                    <dd class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><input type="checkbox" id="backupForm" class="swtichCheckbox" /><label for="backupForm" class="labelSwtichCheckbox">Toggle</label></dd>
+                                </div>
                             </dl>
                             <dl class="uk-margin">
-                                <button type="button" class="uk-button uk-button-primary">ZAPISZ ZMIANY</button>
+                                <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-width-auto@m uk-flex-center">ZAPISZ ZMIANY</button>
                             </dl>
                         </div>
                     </li>
@@ -86,20 +90,26 @@
                         </a>
                         <div class="uk-accordion-content">
                             <h2 class="uk-h3 pBlue">Powiadom mnie gdy: </h2>
-                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
-                                <dt><label class="uk-form-label" for="infoAboutService">Będzie nowość w naszym serwisie</label></dt>
-                                <input type="checkbox" id="infoAboutService" class="swtichCheckbox" checked/><label for="infoAboutService" class="labelSwtichCheckbox">Toggle</label>
+                            <dl class="uk-margin-medium uk-form-horizontal">
+                                <div uk-grid>
+                                    <dt class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><label class="uk-form-label" for="infoAboutService">Pojawi się nowość w naszym serwisie</label></dt>
+                                    <dd class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><input type="checkbox" id="infoAboutService" class="swtichCheckbox" checked/><label for="infoAboutService" class="labelSwtichCheckbox">Toggle</label></dd>
+                                </div>
                             </dl>
-                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
-                                <dt><label class="uk-form-label" for="someoneComment">Ktoś skomentuje zdjęcie/projekt</label></dt>
-                                <input type="checkbox" id="someoneComment" class="swtichCheckbox" checked/><label for="someoneComment" class="labelSwtichCheckbox">Toggle</label>
+                            <dl class="uk-margin-medium uk-form-horizontal">
+                                <div uk-grid>
+                                    <dt class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><label class="uk-form-label" for="someoneComment">Ktoś skomentuje twoje zdjęcie/projekt</label></dt>
+                                    <dd class="uk-width-1-1 uk-width-1-2@s uk-flex uk-flex-center uk-flex-between@s"><input type="checkbox" id="someoneComment" class="swtichCheckbox" checked/><label for="someoneComment" class="labelSwtichCheckbox">Toggle</label></dd>
+                                </div>
                             </dl>
-                            <dl class="uk-margin-medium uk-form-horizontal uk-flex uk-flex-between">
-                                <dt><label class="uk-form-label" for="downloadPicture">Ktoś poprosi o pobranie udostępnionych zdjęć/projektów <img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Gdy wyłączysz tą opcję, udostępnione przez Ciebie zdjęcia czy projekty będzie można pobierać bez twojej zgody."></label></dt>
-                                <input type="checkbox" id="downloadPicture" class="swtichCheckbox"/><label for="downloadPicture" class="labelSwtichCheckbox">Toggle</label>
+                            <dl class="uk-margin-medium uk-form-horizontal">
+                                <div uk-grid>
+                                    <dt class="uk-width-1-1 uk-width-3-4@s uk-flex uk-flex-center uk-flex-between@s"><label class="uk-form-label" for="downloadPicture">Ktoś poprosi o pobranie udostępnionych przez Ciebie zdjęć/projektów <img data-src="images/questionMark.png" alt="Question mark" uk-img uk-tooltip="title: Gdy wyłączysz tą opcję, udostępnione przez Ciebie zdjęcia czy projekty będzie można pobierać bez twojej zgody."></label></dt>
+                                    <dd class="uk-width-1-1 uk-width-1-4@s uk-flex uk-flex-center uk-flex-between@s"><input type="checkbox" id="downloadPicture" class="swtichCheckbox"/><label for="downloadPicture" class="labelSwtichCheckbox">Toggle</label></dd>
+                                </div>
                             </dl>
                             <dl class="uk-margin">
-                                <button type="button" class="uk-button uk-button-primary">ZAPISZ ZMIANY</button>
+                                <button type="button" class="uk-button uk-button-primary uk-width-1-1 uk-width-auto@m uk-flex-center">ZAPISZ ZMIANY</button>
                             </dl>
                         </div>
                     </li>
