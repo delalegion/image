@@ -477,6 +477,25 @@ input[type=checkbox]{
 .paddingBorderNav {
     padding-left: 0px;
 }
+.menuIcon {
+    left: -20px;
+    position: absolute;
+    fill: white;
+}
+.menuIcon:hover {
+    cursor: pointer;
+}
+.avatarBox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    background: #00a86d;
+    border-radius: 6px;
+    margin-right: 12px;
+}
 
 @media only screen and (min-width: 1600px) {
 

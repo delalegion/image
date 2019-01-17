@@ -1,0 +1,22 @@
+<li class="uk-flex uk-flex-middle uk-hidden@m">
+    <a class="uk-link-reset" href="#">
+        <div class="uk-flex uk-flex-middle">
+            <div class="avatarBox">H</div>
+            <h4 class="uk-comment-title uk-margin-remove">{{ auth.user.name }} Kruk <span uk-icon="icon: chevron-down;  ratio: 1.4"></span></h4>
+        </div>
+    </a>
+    <div uk-dropdown="pos: bottom-center; mode: click" class="uk-navbar-dropdown-marginTop">
+        <ul class="uk-nav uk-navbar-dropdown-nav">
+            <li><a href="{{ path_for('dashboard') }}">Strona główna</a></li>
+            <li><a href="{{ path_for('settings') }}">Ustawienia</a></li>
+            <li><a href="#">Support</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="#">Twoje projekty</a></li>
+            <li><a href="#">Udostępnienia</a></li>
+            <li><a href="#">Edytor zdjęć</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="#" class="uk-text-danger">Aktywuj pakiet premium</a></li>
+            <li><a href="{{ path_for('auth.logout') }}">Wyloguj się</a></li>
+        </ul>
+    </div>
+</li>

@@ -1,6 +1,6 @@
 
 <div class="uk-flex uk-flex-row uk-width-1-1">
-    <div class="uk-width-1-4@l uk-width-1-5@xl uk-card uk-card-default uk-padding-remove largeResponsive" uk-height-viewport>
+    <div id="menuSideBar" class="uk-width-1-4@l uk-width-2-6@xl uk-card uk-card-default uk-padding-remove largeResponsive" uk-height-viewport>
         <div class="logo-nav uk-flex uk-flex-center uk-flex-middle">
             <div class="logo-box">
                 <img data-src="images/logo.png" class="logo" alt="Logo page" uk-img>
@@ -51,10 +51,10 @@
             <nav class="uk-container uk-container-large uk-light" uk-navbar style="background: #29ce76; position: relative; z-index: 980;">
                 <div class="uk-navbar-response">
                     <ul class="uk-navbar-nav">
-                        <li class="uk-flex uk-flex-middle largeResponsive">
+                        <li class="uk-flex uk-flex-middle uk-visible@m">
                             <a href="#" class="uk-link-reset uk-padding-remove"><div class="subBox">DARMOWY | KREDYTÓW: 100</div></a>
                         </li>
-                        <li class="uk-flex uk-flex-middle largeResponsive alertNavBox">
+                        <li class="uk-flex uk-flex-middle alertNavBox uk-visible@m">
                             <a class="uk-link-reset" href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" uk-tooltip="title: Powiadomienia; pos: bottom" width="24" height="24" viewBox="0 0 24 24" class="bellSVG"><path d="M15 21c0 1.598-1.392 3-2.971 3s-3.029-1.402-3.029-3h6zm.137-17.055c-.644-.374-1.042-1.07-1.041-1.82v-.003c.001-1.172-.938-2.122-2.096-2.122s-2.097.95-2.097 2.122v.003c.001.751-.396 1.446-1.041 1.82-4.668 2.709-1.985 11.715-6.862 13.306v1.749h20v-1.749c-4.877-1.591-2.193-10.598-6.863-13.306zm-3.137-2.945c.552 0 1 .449 1 1 0 .552-.448 1-1 1s-1-.448-1-1c0-.551.448-1 1-1zm-6.451 16c1.189-1.667 1.605-3.891 1.964-5.815.447-2.39.869-4.648 2.354-5.509 1.38-.801 2.956-.76 4.267 0 1.485.861 1.907 3.119 2.354 5.509.359 1.924.775 4.148 1.964 5.815h-12.903z"/></svg>
                             </a>
@@ -79,10 +79,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="uk-flex uk-flex-middle paddingBorderNav">
+                        <li class="uk-flex uk-flex-middle paddingBorderNav uk-visible@m">
                             <a class="uk-link-reset" href="#">
                                 <div class="uk-flex uk-flex-middle">
-                                    <img class="uk-comment-avatar uk-border-rounded uk-margin-right" src="images/avatar.jpg" width="60" height="60" alt="Avatar">
+                                    {#<img class="uk-comment-avatar uk-border-rounded uk-margin-right" src="images/avatar.jpg" width="60" height="60" alt="Avatar">#}
+                                    <div class="avatarBox">H</div>
                                     <h4 class="uk-comment-title uk-margin-remove">{{ auth.user.name }} Kruk <span uk-icon="icon: chevron-down;  ratio: 1.4"></span></h4>
                                 </div>
                             </a>
@@ -98,10 +99,11 @@
                                 </ul>
                             </div>
                         </li>
+                        {% include 'templates/partials/mobilemenu.twig' %}
                     </ul>
                 </div>
             </nav>
         </div>
-        <div uk-scrollspy="cls:uk-animation-fade">
+        <main uk-scrollspy="cls:uk-animation-fade">
 
 
